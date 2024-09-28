@@ -1,0 +1,29 @@
+
+
+.nav {
+  padding: 0px 100px;
+  display: flex;
+  justify-content: space-between;
+  background-color: #231E39;
+  box-shadow: 10px 10px 15px rgba(0,0,0,0.35);
+  .logo {
+    width: 80px;
+  }
+  .connect_button {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.message{
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 5rem 3rem;
+  background-color: #9a02ac;
+  position: absolute;
+  z-index: 11111;
+  border-radius: 1rem;
+  font-size: 2rem;
+
+}

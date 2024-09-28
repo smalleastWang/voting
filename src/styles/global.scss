@@ -1,0 +1,35 @@
+@import './reset.scss';
+
+$directions: ('t': ('top'), 'b': ('bottom'), 'l': ('left'), 'r': ('right'), 'v': ('top', 'bottom'), 'h': ('left', 'right'));
+$dimensions: ('p': 'padding', 'm': 'margin');
+
+@for $i from 1 through 25 {
+  @each $dim in $dimensions {
+    @each $dir in $directions {
+      $size: $i * 2;
+      .#{nth($dim, 1)}#{nth($dir, 1)}-#{$size} {
+        @each $d in nth($dir, 2) { 
+          #{nth($dim, 2)}-#{$d}: #{$size}px;
+        }
+      }
+    }
+  }
+}
+html, body {
+  background-image: linear-gradient(
+    to right top,
+    #2d0036,
+    #4f015b,
+    #730283,
+    #9a02ac,
+    #c400d7
+  );
+  height: 100vh;
+  width: 100vw;
+  overflow-x: hidden;
+}
+
+
+.text-start {text-align: start}
+.text-center {text-align: center}
+.text-end {text-align: end}
